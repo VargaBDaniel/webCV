@@ -1,57 +1,3 @@
-@font-face {
-  font-family: roboto;
-  src: url(../fonts/Roboto-Medium.ttf);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: roboto;
-  color: #FFF;
-}
-
-* ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-
-* ::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
-}
-
-* ::-webkit-scrollbar-thumb {
-  background: #7cb4bb;
-  border: 0px none #ffffff00;
-  border-radius: 50px;
-}
-
-* ::-webkit-scrollbar-thumb:hover {
-  background: #639093;
-}
-
-* ::-webkit-scrollbar-thumb:active {
-  background: #598186;
-}
-
-* ::-webkit-scrollbar-track {
-  background: #ffffff00;
-  border: 0px none #ffffff00;
-  border-radius: 100px;
-}
-
-* ::-webkit-scrollbar-track:hover {
-  background: #ffffff00;
-}
-
-* ::-webkit-scrollbar-track:active {
-  background: #ffffff00;
-}
-
-* ::-webkit-scrollbar-corner {
-  background: transparent;
-}
-
 * body {
   height: 100%;
   position: relative;
@@ -148,6 +94,8 @@
   top: 75px;
   left: 350px;
   overflow: visible;
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
 }
 
 * body div.header.desktop-module div.contact div {
@@ -155,6 +103,8 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
+  -webkit-transform: skewX(45deg);
+          transform: skewX(45deg);
 }
 
 * body div.header.desktop-module div.contact div img {
@@ -163,27 +113,23 @@
 }
 
 * body div.header.desktop-module div.contact div h1 {
+  font-family: roboto-light;
   font-size: 1.3rem;
   margin-left: 10px;
 }
 
-* body div.header.desktop-module div.contact div:nth-child(2) {
-  margin-left: -30px;
-}
-
-* body div.header.desktop-module div.contact div:nth-child(3) {
-  margin-left: -60px;
+* body div.header.desktop-module div.contact div a {
+  font-family: roboto-light;
 }
 
 * body div.sidemenu {
-  width: 60%;
+  width: 50%;
   min-width: 800px;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   font-size: .9rem;
-  direction: rtl;
 }
 
 * body div.sidemenu div.bg {
@@ -197,18 +143,6 @@
   z-index: -1;
 }
 
-* body div.sidemenu::after {
-  content: '';
-  width: 100%;
-  height: 100px;
-  background: -webkit-gradient(linear, left bottom, right top, from(#28505f), color-stop(50%, rgba(40, 80, 95, 0)));
-  background: linear-gradient(to top right, #28505f 0%, rgba(40, 80, 95, 0) 50%);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 10000;
-}
-
 * body div.sidemenu div.bio-wrapper {
   width: 80%;
   height: calc(100% - 250px);
@@ -216,47 +150,74 @@
   padding-left: 15px;
   position: absolute;
   left: 0;
-  overflow-x: hidden;
 }
 
-* body div.sidemenu div.bio-wrapper * {
-  direction: ltr;
-}
-
-* body div.sidemenu div.bio-wrapper div.section {
+* body div.sidemenu div.bio-wrapper div.button-wrapper {
   width: 100%;
-}
-
-* body div.sidemenu div.bio-wrapper div.section h1 {
-  text-indent: 15px;
-}
-
-* body div.sidemenu div.bio-wrapper div.section div {
-  margin: 15px 0;
+  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  overflow: visible;
+}
+
+* body div.sidemenu div.bio-wrapper div.button-wrapper div.card {
+  width: 175px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #63767D;
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-transition: linear .1s;
+  transition: linear .1s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
 }
 
-* body div.sidemenu div.bio-wrapper div.section div img {
-  width: 50px;
-  margin-right: 10px;
+* body div.sidemenu div.bio-wrapper div.button-wrapper div.card:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.5);
 }
 
-* body div.sidemenu div.bio-wrapper div.section div h2 {
-  font-weight: 350;
+* body div.sidemenu div.bio-wrapper div.button-wrapper div.card img {
+  width: 80px;
 }
 
-* body div.sidemenu div.bio-wrapper div.section div h2 span {
-  color: #7CB4BB;
-  background-color: rgba(40, 80, 95, 0.3);
+* body div.sidemenu div.bio-wrapper div.button-wrapper div.card h1 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+* body div.sidemenu div.bio-wrapper div.bio iframe {
+  width: 100%;
+  height: calc(100vh - 475px);
+  margin-top: 25px;
+  border: none;
 }
 
 * body div.slider {
-  width: 90vw;
+  width: 50vw;
   height: 100vh;
   position: absolute;
   right: 0;

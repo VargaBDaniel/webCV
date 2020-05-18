@@ -1,57 +1,6 @@
-@font-face {
-    font-family: roboto;
-    src: url(../fonts/Roboto-Medium.ttf);
-}
+
 
 * {
-    ::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
-    }
-
-    ::-webkit-scrollbar-button {
-        width: 0px;
-        height: 0px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #7cb4bb;
-        border: 0px none #ffffff00;
-        border-radius: 50px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: #639093;
-    }
-
-
-    ::-webkit-scrollbar-thumb:active {
-        background: #598186;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #ffffff00;
-        border: 0px none #ffffff00;
-        border-radius: 100px;
-    }
-
-    ::-webkit-scrollbar-track:hover {
-        background: #ffffff00;
-    }
-
-    ::-webkit-scrollbar-track:active {
-        background: #ffffff00;
-    }
-
-    ::-webkit-scrollbar-corner {
-        background: transparent;
-    }
-
-    margin: 0;
-    padding: 0;
-
-    font-family: roboto;
-    color: #FFF;
 
     body {
         height: 100%;
@@ -135,10 +84,14 @@
 
                 overflow: visible;
 
+                transform: skewX(-45deg);
+
                 div {
                     display: flex;
 
                     margin-bottom: 10px;
+
+                    transform: skewX(45deg);
 
                     img {
                         height: 26px;
@@ -146,24 +99,20 @@
                     }
 
                     h1 {
+                        font-family: roboto-light;
                         font-size: 1.3rem;
 
                         margin-left: 10px;
                     }
-
-                    &:nth-child(2) {
-                        margin-left: -30px;
-                    }
-
-                    &:nth-child(3) {
-                        margin-left: -60px;
+                    a {
+                        font-family: roboto-light;
                     }
                 }
             }
         }
 
         div.sidemenu {
-            width: 60%;
+            width: 50%;
             min-width: 800px;
             height: 100vh;
 
@@ -172,8 +121,6 @@
             left: 0;
 
             font-size: .9rem;
-
-            direction: rtl;
 
             div.bg {
                 width: 100%;
@@ -186,19 +133,6 @@
                 left: 0;
                 z-index: -1;
             }
-            &::after {
-                content: '';
-
-                width: 100%;
-                height: 100px;
-
-                background: linear-gradient(to top right, rgba(40,80,95,1) 0%,rgba(40,80,95,0) 50%);
-
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                z-index: 10000;
-            }
 
             div.bio-wrapper {
                 width: 80%;
@@ -210,45 +144,63 @@
                 position: absolute;
                 left: 0;
 
-                overflow-x: hidden;
-
-                * {
-                    direction: ltr;
-                }
-
-                div.section {
+                div.button-wrapper {
                     width: 100%;
+                    height: 200px;
 
-                    h1 {
-                        text-indent: 15px;
-                    }
+                    display: flex;
+                    justify-content: space-evenly;
 
-                    div {
-                        margin: 15px 0;
+                    // background-color: aqua;
+
+                    overflow: visible;
+
+                    div.card {
+                        width: 175px;
+                        height: 200px;
 
                         display: flex;
+                        flex-direction: column;
                         align-items: center;
+                        justify-content: space-evenly;
+
+                        background-color: #63767D;
+                        box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.5);
+                        transition: linear .1s;
+
+                        user-select: none;
+                        cursor: pointer;
+
+                        &:hover {
+                            filter: brightness(0.8);
+                            box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5);
+                        }
 
                         img {
-                            width: 50px;
-                            margin-right: 10px;
+                            width: 80px;
                         }
-
-                        h2 {
-                            font-weight: 350;
-
-                            span {
-                                color: #7CB4BB;
-                                background-color: rgba(40, 80, 95, 0.3);
-                            }
+                        h1 {
+                            font-size: 1.6rem;
+                            font-weight: normal;
+                            text-align: center;
                         }
+                    }
+                }
+
+                div.bio {
+                    
+                    iframe {
+                        width: 100%;
+                        height: calc(100vh - 475px);
+                        margin-top: 25px;
+                        border: none;
                     }
                 }
             }
         }
 
         div.slider {
-            width: 90vw;
+            width: 50vw;
             height: 100vh;
 
             position: absolute;

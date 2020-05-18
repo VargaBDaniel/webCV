@@ -9,8 +9,10 @@
     <title>Varga B. Dániel - WebDev</title>
 
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/meta.css">
 
     <script src="scripts/animateIfInViewport.js"></script>
+    <script src="scripts/changeBio.js"></script>
 </head>
 
 <body onload="getElements()">
@@ -28,56 +30,34 @@
                 <h1>web.vargadaniel@gmail.com</h1>
             </div>
             <div>
-                <img src="img/icons/phone-512.png" alt="phone">
+                <img src="img/icons/phone.png" alt="phone">
                 <h1>+36 70 622 3254</h1>
+            </div>
+            <div>
+                <img src="img/icons/github-w.png" alt="github">
+                <h1><a href="https://github.com/VargaBDaniel" target="_blank">github.com/VargaBDaniel</a></h1>
             </div>
         </div>
     </div>
     <div class="sidemenu">
         <div class="bg"></div>
         <div class="bio-wrapper">
-            <div class="section skills">
-                <h1 class="title">Skills</h1>
-                <div>
-                    <img src="img/icons/HTML-512.png" alt="">
-                    <h2>When it comes to webdevelopment I use languages like<br /> <span>HTML5</span>, <span>CSS3</span>,
-                        <span>SCSS</span> and <span>JS</span></h2>
+            <div class="button-wrapper">
+                <div class="card" data-bio-page="skills" onclick="getBioPage()">
+                    <img src="img/icons/skills.png" alt="">
+                    <h1>Skills</h1>
                 </div>
-                <div>
-                    <img src="img/icons/Adobe-Logo.png" alt="">
-                    <h2>I am familiar with <span>Adobe</span> products like <br />
-                        <span>XD</span>, <span>InDesign</span> or <span>Color</span> and I am currently in the process
-                        <br />
-                        of learning <span>PhotoShop</span> and <span>Illustrator</span></h2>
-                </div>
-            </div>
-            <div class="section languages">
-                <h1 class="title">Languages</h1>
-                <div>
-                    <h2><span>Hungarian</span> - native</h2>
-                </div>
-                <div>
-                    <h2><span>English</span> - conversational, technical (IT) level</h2>
-                </div>
-            </div>
-            <div class="section freetime">
-                <h1 class="title">Free time</h1>
-                <div>
-                    <img src="img/icons/37461-200.png" alt="">
-                    <h2>I am a huge fan of playing cards, <br />
-                        cardistry and close-up magic.</h2>
-                </div>
-                <div>
-                    <img src="img/icons/9_glyph-512.png" alt="">
-                    <h2>Boardgames and pen-and-paper RPGs <br />
-                        have always been a passion of mine, I love <br />
-                        playing them with my friends when I have the time.</h2>
-                </div>
-                <div>
+                <div class="card" data-bio-page="education" onclick="getBioPage()">
                     <img src="img/icons/book_logo.png" alt="">
-                    <h2>Should it be a new programming language, a new card trick, <br />
-                        or just casually something about the universe, I am eager to learn about it!</h2>
+                    <h1>Education & Languages</h1>
                 </div>
+                <div class="card" data-bio-page="freetime" onclick="getBioPage()">
+                    <img src="img/icons/card.png" alt="">
+                    <h1>Free Time</h1>
+                </div>
+            </div>
+            <div class="bio">
+                <iframe id="bio-frame" src="education.html"></iframe>
             </div>
         </div>
     </div>

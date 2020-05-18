@@ -1,0 +1,42 @@
+div.container {
+  margin-bottom: 10px;
+  font-weight: medium;
+}
+
+div.container h1 {
+  font-weight: normal;
+}
+
+div.container h1.title {
+  margin-bottom: 25px;
+}
+
+div.container div.wrapper {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+div.container div.wrapper h2 {
+  font-family: roboto-light;
+  font-weight: lighter;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+div.container div.wrapper h2 span {
+  color: #7CB4BB;
+}
+
+div.container div.wrapper p {
+  font-family: roboto-light;
+  font-size: 1.2rem;
+  font-weight: medium;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  text-indent: 10px;
+}
+
+div.container div.wrapper p a {
+  color: #7CB4BB;
+}
+/*# sourceMappingURL=education.css.map */
