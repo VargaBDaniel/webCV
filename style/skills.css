@@ -36,11 +36,12 @@ div.container div.wrapper div {
 }
 
 div.container div.wrapper div img {
-  height: 100px;
+  height: 75px;
 }
 
 div.container div.wrapper div h1 {
   margin-top: 10px;
-  font-size: 1.4rem;
+  font-family: roboto-light;
+  font-size: 1.3rem;
 }
 /*# sourceMappingURL=skills.css.map */

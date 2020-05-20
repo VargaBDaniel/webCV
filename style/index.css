@@ -154,7 +154,7 @@
 
 * body div.sidemenu div.bio-wrapper div.button-wrapper {
   width: 100%;
-  height: 200px;
+  height: 175px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,8 +165,8 @@
 }
 
 * body div.sidemenu div.bio-wrapper div.button-wrapper div.card {
-  width: 175px;
-  height: 200px;
+  width: 150px;
+  height: 175px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,6 +199,14 @@
           box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.5);
 }
 
+* body div.sidemenu div.bio-wrapper div.button-wrapper div.card.deactivated {
+  cursor: default;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
 * body div.sidemenu div.bio-wrapper div.button-wrapper div.card img {
   width: 80px;
 }
@@ -211,7 +219,7 @@
 
 * body div.sidemenu div.bio-wrapper div.bio iframe {
   width: 100%;
-  height: calc(100vh - 475px);
+  height: calc(100vh - 450px);
   margin-top: 25px;
   border: none;
 }
