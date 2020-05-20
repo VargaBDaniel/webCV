@@ -1,0 +1,38 @@
+div.container {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    div.wrapper {
+        position: relative;
+
+        p {
+            font-size: 1.3rem;
+
+            text-align: center;
+            white-space: pre-line;
+
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        div.img-wrapper {
+            width: 100px;
+            height: 100px;
+
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 100%;
+                opacity: 0.4;
+            }
+        }
+    }
+}
